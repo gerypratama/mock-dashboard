@@ -26,19 +26,19 @@ export default function HomeBarChart() {
             <XAxis
               dataKey={"month"}
               tickLine={false}
-              tickMargin={10}
-              axisLine={true}
+              tickMargin={4}
+              axisLine={false}
               tickFormatter={(value) => value.slice(0, 3)}
             />
             <YAxis
               tickLine={false}
-              axisLine={true}
+              axisLine={false}
               tickFormatter={(value) => value}
             />
             <ChartTooltip content={<ChartTooltipContent />} />
             <ChartLegend content={<ChartLegendContent />} />
-            <Bar dataKey="desktop" fill="var(--color-desktop)" radius={4} />
-            <Bar dataKey="mobile" fill="var(--color-mobile)" radius={4} />
+            <Bar dataKey="desktop" fill="var(--color-desktop)" radius={3} />
+            <Bar dataKey="mobile" fill="var(--color-mobile)" radius={3} />
           </BarChart>
         </ChartContainer>
       </CardContent>
