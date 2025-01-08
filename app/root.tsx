@@ -46,7 +46,7 @@ export default function App() {
   return (
     <SidebarProvider>
       <AppSidebar />
-      <main className="flex flex-1 flex-col p-8 gap-4">
+      <main className="flex flex-1 flex-col px-8 py-12 gap-4">
         <Outlet />
       </main>
     </SidebarProvider>
