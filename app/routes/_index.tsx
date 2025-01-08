@@ -1,14 +1,17 @@
 import type { MetaFunction } from "@remix-run/node";
 import HomeBarChart from "~/components/page/home/barchart";
 import { Avatar, AvatarFallback } from "~/components/ui/avatar";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "~/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "~/components/ui/card";
 import { mainDashCards, mainSalesCards } from "~/const/cards";
 
 export const meta: MetaFunction = () => {
-  return [
-    { title: "Mock Dashboard" },
-    { name: "description", content: "v1" },
-  ];
+  return [{ title: "Mock Dashboard" }, { name: "description", content: "v1" }];
 };
 
 export default function Index() {
@@ -38,10 +41,18 @@ export default function Index() {
           </CardHeader>
           <CardContent className="flex flex-col gap-6">
             {mainSalesCards.map((item) => (
-              <div key={item.email} className="flex justify-between items-center">
+              <div
+                key={item.email}
+                className="flex justify-between items-center"
+              >
                 <div className="flex items-center gap-6">
                   <Avatar>
-                    <AvatarFallback>{item.name.split(" ").map(str => str[0].toUpperCase()).join("")}</AvatarFallback>
+                    <AvatarFallback>
+                      {item.name
+                        .split(" ")
+                        .map((str) => str[0].toUpperCase())
+                        .join("")}
+                    </AvatarFallback>
                   </Avatar>
                   <div className="flex flex-col gap-1">
                     <span className="font-medium">{item.name}</span>
